@@ -1,7 +1,7 @@
 module.exports = {
   search: {
     queryData: {
-      path: '/testRedis/getRedis',
+      path: '/redis/setListValue',
       method: 'POST'
     }
   }
