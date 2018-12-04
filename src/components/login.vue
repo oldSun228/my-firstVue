@@ -13,7 +13,7 @@
                             <el-tabs v-model="activeName" class="users" style="height: 30px;font-size: 25px"
                                      @tab-click="handleClick">
                                 <el-tab-pane label="学生" name="students" class="tab1"></el-tab-pane>
-                                <el-tab-pane label="教师" name="teacher" class="tab2"></el-tab-pane>
+                                <el-tab-pane label="教师11" name="teacher" class="tab2"></el-tab-pane>
                                 <el-tab-pane label="教务老师" name="eduTeacher" class="tab3"></el-tab-pane>
                             </el-tabs>
                         </div>
