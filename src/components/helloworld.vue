@@ -4,7 +4,7 @@
         <el-table-column prop="sex" label="性别" width="" align="center"></el-table-column>
     </el-table>
     <!--<el-button type="primary">主要aaa按钮</el-button>-->
-    <!--<el-button type="success">成功按钮</el-button>-->
+    <!--<el-button type="success">成功bbb按钮</el-button>-->
 </template>
 <script>
     export default {
