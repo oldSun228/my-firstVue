@@ -3,8 +3,8 @@
         <el-table-column prop="name" label="姓名" width="180" align="center"></el-table-column>
         <el-table-column prop="sex" label="性别" width="" align="center"></el-table-column>
     </el-table>
-    <!--<el-button type="primary">主要按钮</el-button>-->
-    <!--<el-button type="success">成功按钮</el-button>-->
+    <!--<el-button type="primary">主要aaaa按钮</el-button>-->
+    <!--<el-button type="success">成功bbbb按钮</el-button>-->
 </template>
 <script>
     export default {
