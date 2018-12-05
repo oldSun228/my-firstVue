@@ -1,49 +1,48 @@
 <template>
+    <!--背景图-->
     <div class="note" v-loading="loading">
-        <el-container style="align: center">
-            <el-main style="width: 100%;height: 638px">
-                <!--login框，表单+tab标签页的组合-->
-                <div class="loginFrame" >
 
-                    <!--表单组件放在外面，标签栏在里面-->
-                    <el-form class="demo-ruleForm login-container">
+        <!--login框，表单+tab标签页的组合-->
+        <div class="loginFrame">
 
-                        <!--tab标签-->
-                        <div class="tabsUser">
-                            <el-tabs v-model="activeName" class="users" style="height: 30px;font-size: 25px"
-                                     @tab-click="handleClick">
-                                <el-tab-pane label="学生11" name="students" class="tab1"></el-tab-pane>
-                                <el-tab-pane label="教师11" name="teacher" class="tab2"></el-tab-pane>
-                                <el-tab-pane label="教务老师111" name="eduTeacher" class="tab3"></el-tab-pane>
-                            </el-tabs>
-                        </div>
+            <!--表单组件放在外面，标签栏在里面-->
+            <el-form class="demo-ruleForm login-container">
 
-                        <div class="formGroup">
-                            <el-form-item label="账号">
-                                <el-input type="text" auto-complete="off" placeholder="请输入您的账号" class="form-control"
-                                          v-model="account"></el-input>
-                            </el-form-item>
-                            <el-form-item label="密码" class="form-inline">
-                                <el-input type="password" auto-complete="off" placeholder="请输入密码" class="form-control"
-                                          v-model="password"></el-input>
-                            </el-form-item>
-                        </div>
-                        <div class="remFor">
-                            <el-checkbox v-model="checked" class="remember" @change="checkboxChange">记住密码</el-checkbox>
-                            <a href="###" @click="alertMessage" class="forget">忘记密码？</a>
-                        </div>
-
-                        <div class="formButton">
-                            <el-form-item style="width:100%;">
-                                <el-button type="primary" style="width:100%;" @click="login">登录</el-button>
-                            </el-form-item>
-                        </div>
-                        {{curTime}}
-                    </el-form>
+                <!--tab标签-->
+                <div class="tabsUser">
+                    <el-tabs v-model="activeName" class="users" style="height: 30px;font-size: 25px"
+                             @tab-click="handleClick">
+                        <el-tab-pane label="学生" name="students" class="tab1"></el-tab-pane>
+                        <el-tab-pane label="教师" name="teacher" class="tab2"></el-tab-pane>
+                        <el-tab-pane label="教务老师" name="eduTeacher" class="tab3"></el-tab-pane>
+                    </el-tabs>
                 </div>
-            </el-main>
-        </el-container>
+
+                <div class="formGroup">
+                    <el-form-item label="账号">
+                        <el-input type="text" auto-complete="off" placeholder="请输入您的账号" class="form-control"
+                                  v-model="account"></el-input>
+                    </el-form-item>
+                    <el-form-item label="密码" class="form-inline">
+                        <el-input type="password" auto-complete="off" placeholder="请输入密码" class="form-control"
+                                  v-model="password"></el-input>
+                    </el-form-item>
+                </div>
+                <div class="remFor">
+                    <el-checkbox v-model="checked" class="remember" @change="checkboxChange">记住密码</el-checkbox>
+                    <a href="###" @click="alertMessage" class="forget">忘记密码？</a>
+                </div>
+
+                <div class="formButton">
+                    <el-form-item style="width:100%;">
+                        <el-button type="primary" style="width:100%;" @click="login">登录</el-button>
+                    </el-form-item>
+                </div>
+                {{curTime}}
+            </el-form>
+        </div>
     </div>
+
 </template>
 
 <script>
@@ -82,7 +81,7 @@
             },
             defaultParam () {
                 if ("students" === this.activeName) {
-                    this.account = this.val[1].name;
+                    this.account = "students";
                     this.password = "123456";
                 } else if ("teacher" === this.activeName) {
                     this.account = "teacher";
@@ -103,7 +102,7 @@
                     }
                 });
             },
-            checkboxChange () {
+            checkboxChange(){
                 console.log(this.checked);
             },
             setTime () {

@@ -5,7 +5,7 @@
 </template>
 
 <script>
-    import login from './login'
+    import login from './Login'
 
     export default {
         components: {
@@ -16,7 +16,7 @@
         },
         data () {
             return {
-                val: [{name: '1'}, {name: '2'}]
+                val: '1111'
             }
         },
         computed: {

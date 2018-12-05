@@ -1,30 +1,35 @@
 <template>
-    <el-table :data="tableData" stripe style="width: 100%">
-        <el-table-column prop="name" label="姓名" width="180" align="center"></el-table-column>
-        <el-table-column prop="sex" label="性别" width="" align="center"></el-table-column>
-    </el-table>
-    <!--<el-button type="primary">主要aaaa按钮</el-button>-->
-    <!--<el-button type="success">成功bbbb按钮</el-button>-->
+    <div class="home">
+        <tHead class="header"></tHead>
+        <div class="main">
+            <router-view></router-view>
+        </div>
+    </div>
 </template>
 <script>
+    import tHead from './header'
+
     export default {
-        data () {
-            return {
-                tableData: []
-            }
+        components: {
+            tHead,
         },
-        mounted () {
-            this.postApiData();
-        },
+        data() {
+            return {};
+        }
+        ,
         methods: {
-            postApiData () {
-                this.$backend.request(this.$api.search.queryData).then((result) => {
-                    this.tableData = result;
-                })
-            }
+
         }
     }
 </script>
 <style scoped>
-
+    .home {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    .main{
+        flex: 1;
+        align-content: left;
+    }
 </style>
