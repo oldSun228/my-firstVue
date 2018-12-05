@@ -14,7 +14,7 @@
                                      @tab-click="handleClick">
                                 <el-tab-pane label="学生11" name="students" class="tab1"></el-tab-pane>
                                 <el-tab-pane label="教师11" name="teacher" class="tab2"></el-tab-pane>
-                                <el-tab-pane label="教务老师11" name="eduTeacher" class="tab3"></el-tab-pane>
+                                <el-tab-pane label="教务老师111" name="eduTeacher" class="tab3"></el-tab-pane>
                             </el-tabs>
                         </div>
 
