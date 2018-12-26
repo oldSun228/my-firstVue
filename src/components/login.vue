@@ -73,7 +73,7 @@
             login () {
                 this.loading = true;
                 setTimeout(() => {
-                    this.$router.push({path: '/helloworld'});
+                    this.$router.push({path: '/helloworld',query:{account:this.account}});
                 }, 2000)
             },
             handleClick () {

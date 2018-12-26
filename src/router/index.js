@@ -6,47 +6,53 @@ import testOne from '@/components/testOne';
 import testTwo from '@/components/testTwo';
 import testThree from '@/components/testThree';
 import testFour from '@/components/testFour';
+import message from '@/components/message';
 
 Vue.use(Router);
 
 export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'index',
-      component: index
-    },
-    {
-      path: '/helloworld',
-      name: 'helloworld',
-      component: HelloWorld,
-      children: [
+    routes: [
         {
-          path: '',
-          name:'testOne',
-          component:testOne
+            path: '/',
+            name: 'index',
+            component: index
         },
         {
-          path: '/testOne',
-          name:'testOne',
-          component:testOne
+            path: '/helloworld',
+            name: 'helloworld',
+            component: HelloWorld,
+            children: [
+                {
+                    path: '',
+                    name: 'testOne',
+                    component: testOne
+                },
+                {
+                    path: '/testOne',
+                    name: 'testOne',
+                    component: testOne
+                },
+                {
+                    path: '/testTwo',
+                    name: 'testTwo',
+                    component: testTwo
+                },
+                {
+                    path: '/testThree',
+                    name: 'testThree',
+                    component: testThree
+                },
+                {
+                    path: '/testFour',
+                    name: 'testFour',
+                    component: testFour
+                },
+            ]
         },
         {
-          path: '/testTwo',
-          name:'testTwo',
-          component:testTwo
+            path: '/message',
+            name: 'message',
+            component: message
         },
-        {
-          path: '/testThree',
-          name:'testThree',
-          component:testThree
-        },
-        {
-          path: '/testFour',
-          name:'testFour',
-          component:testFour
-        },
-      ]
-    }
-  ]
+    ]
 })
